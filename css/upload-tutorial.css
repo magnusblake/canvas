@@ -1,0 +1,88 @@
+.tutorial-upload-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #EFEFEF;
+    color: #2A2727;
+}
+
+.tutorial-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: 'TT Firs Neue';
+    color: #2A2727;
+}
+
+.tutorial-form-group {
+    margin-bottom: 24px;
+}
+
+.tutorial-form-row {
+    display: flex;
+    gap: 24px;
+}
+
+.tutorial-label {
+    display: block;
+    margin-bottom: 12px;
+    font-family: 'TT Firs Neue';
+    font-size: 16px;
+    color: #2A2727;
+}
+
+.tutorial-input,
+.tutorial-textarea,
+.tutorial-select {
+    width: 100%;
+    padding: 16px;
+    background: #FAFAFA;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+    color: #2A2727;
+    font-family: 'TT Firs Neue';
+    font-size: 16px;
+}
+
+.tutorial-textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.tutorial-submit-btn {
+    width: 100%;
+    height: 56px;
+    background: #2A2727;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'TT Firs Neue';
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tutorial-submit-btn:hover {
+    background: #3a3737;
+}
+
+.tutorial-thumbnail-preview {
+    margin-top: 16px;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tutorial-thumbnail-preview img {
+    width: 100%;
+    height: auto;
+}
+
+.tutorial-file-input {
+    background: #FAFAFA;
+    padding: 16px;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+    width: 100%;
+}

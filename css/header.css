@@ -1,0 +1,536 @@
+@font-face {
+    font-family: "InversionzUnboxed";
+    src: url(/font/inversionzunboxed.ttf);
+}
+.main-header {
+    background: #FFFFFF;
+    height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-section .logo {
+    font-family: 'InversionzUnboxed', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo .accent {
+    color: #FF0000;
+}
+  .center-section .search-bar {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 8px 16px;
+      width: 400px;
+      transition: all 0.3s ease;
+      position: relative;
+  }
+
+  .main-header.scrolled .search-bar {
+      background: #F5F5F5;
+  }
+
+  .search-bar input {
+      border: none;
+      background: none;
+      width: 100%;
+      padding: 8px;
+      outline: none;
+  }
+
+  .main-header.scrolled .search-bar input {
+      color: #000000;
+  }
+
+  .main-header.scrolled .search-bar input::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+  }
+
+  .search-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 8px;
+      display: none;
+      max-height: 400px;
+      overflow-y: auto;
+      z-index: 1000;
+  }
+
+  .search-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+  }
+
+  .search-item:hover {
+      background: #f5f5f5;
+  }
+
+  .search-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 12px;
+  }
+
+  .search-item.user img {
+      border-radius: 50%;
+  }
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.upgrade-button button {
+    background: #FF0000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.dropdown .username {
+    background: none;
+    border: none;
+    font-weight: 500;
+    color: #000000;
+}
+  .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 8px 0;
+      min-width: 200px;
+      z-index: 1000;
+      display: none;
+  }
+
+  .dropdown-menu.active {
+      display: block;
+  }
+
+  .dropdown-item {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+  }
+
+  .dropdown-item:hover {
+      background: #F8F8F8;
+  }
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+  .burger-menu-icon {
+      cursor: pointer;
+  }
+
+  .burger-menu-icon img {
+      width: 42px;
+      height: 40px;
+  }
+
+  @media (max-width: 1200px) {
+      .search-bar {
+          width: 300px;
+      }
+  }
+
+  @media (max-width: 991px) {
+      .upgrade-button {
+          display: none;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .main-header {
+          height: 60px;
+      }
+    
+      .center-section {
+          display: none;
+      }
+    
+      .burger-menu-icon {
+          display: block;
+      }
+    
+      .user-dropdown .username {
+          display: none;
+      }
+    
+      .header-container {
+          padding: 0 15px;
+      }
+  }
+
+  @media (max-width: 576px) {
+      .header-container {
+          padding: 0 15px;
+      }
+    
+      .logo {
+          font-size: 20px;
+      }
+  }
+
+  @media (max-width: 375px) {
+      .header-container {
+          padding: 0 10px;
+      }
+  }
+  .main-header {
+      background: rgba(0, 0, 0, 0.8);
+      transition: all 0.3s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+  }
+
+  /* Начальные стили для светлого текста */
+  .logo,
+  .search-bar input,
+  .search-bar input::placeholder,
+  .upgrade-button button,
+  .dropdown .username {
+      color: #FFFFFF;
+      transition: all 0.3s ease;
+  }
+
+  .logo .accent {
+      color: #FF0000;
+  }
+
+  /* Стили при прокрутке */
+  .main-header.scrolled {
+      background: #FFFFFF;
+  }
+
+  .main-header.scrolled .logo,
+  .main-header.scrolled .search-bar input,
+  .main-header.scrolled .search-bar input::placeholder,
+  .main-header.scrolled .dropdown .username {
+      color: #000000;
+  }
+
+  .main-header.scrolled .logo .accent {
+      color: #FF0000;
+  }
+
+.burger-menu-wrapper {
+    position: relative;
+}
+
+.burger-trigger {
+    cursor: pointer;
+}
+  .burger-menu {
+      position: fixed;
+      top: 80px; /* Высота header */
+      left: -300px;
+      width: 300px;
+      height: calc(100vh - 80px);
+      background: #1A1A1A;
+      transition: 0.3s ease;
+      z-index: 999;
+  }
+
+  .burger-menu.active {
+      left: 0;
+  }
+
+  .menu-nav ul {
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+  }
+
+  .menu-nav li {
+      margin-bottom: 20px;
+  }
+
+  .menu-nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.2s ease;
+  }
+
+  .menu-nav a:hover {
+      color: #FF4400;
+  }
+
+.login-btn {
+    padding: 8px 24px;
+    border-radius: 8px;
+    background: #FF4400;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #e53e00;
+}
+
+.user-dropdown {
+    position: relative;
+}
+
+.user-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.user-avatar-1 {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    color: #ffff;
+    font-weight: 500;
+}
+  .username-moderator {
+      color: #ffd700 !important;
+      font-weight: 600;
+      text-shadow: 0 0 1px rgba(255, 215, 0, 0.2);
+  }
+
+ 
+/* Add these new styles */
+.main-nav {
+    margin-left: 40px;
+}
+
+.nav-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.main-header.scrolled .nav-link {
+    color: #000000;
+}
+
+.main-header.scrolled .nav-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu {
+    min-width: 200px;
+    padding: 8px 0;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 991px) {
+    .main-nav {
+        display: none;
+    }
+}
+
+ 
+ /* Adding these SICK animations */
+ .logo {
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .logo .accent {
+     position: relative;
+     animation: logoFlash 3s infinite;
+ }
+ 
+ @keyframes logoFlash {
+     0%, 100% { color: #FF0000; }
+     50% { color: #FF4400; text-shadow: 0 0 10px rgba(255, 68, 0, 0.5); }
+ }
+ 
+ .search-bar {
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .search-bar:after {
+     content: '';
+     position: absolute;
+     top: -50%;
+     left: -50%;
+     width: 200%;
+     height: 200%;
+     background: linear-gradient(
+         45deg,
+         transparent,
+         rgba(255, 255, 255, 0.1),
+         transparent
+     );
+     transform: rotate(45deg);
+     animation: searchBarShine 3s infinite;
+ }
+ 
+ @keyframes searchBarShine {
+     0% { transform: translateX(-100%) rotate(45deg); }
+     100% { transform: translateX(100%) rotate(45deg); }
+ }
+ 
+ .upgrade-button button {
+     animation: buttonPulse 2s infinite;
+ }
+ 
+ @keyframes buttonPulse {
+     0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4); }
+     70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+     100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+ }
+ 
+ .user-avatar-1 {
+     animation: avatarSpin 10s linear infinite;
+ }
+ 
+ @keyframes avatarSpin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+ }
+ 
+ /* Добавляем БЕЗУМНЫЕ эффекты */
+ .main-header {
+     position: fixed;
+     animation: headerReveal 0.5s ease-out;
+ }
+ 
+ @keyframes headerReveal {
+     from { transform: translateY(-100%); }
+     to { transform: translateY(0); }
+ }
+ 
+ .nav-link {
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .nav-link:before {
+     content: '';
+     position: absolute;
+     left: -100%;
+     width: 100%;
+     height: 2px;
+     bottom: 0;
+     background: #FF4400;
+     transition: 0.3s;
+ }
+ 
+ .nav-link:hover:before {
+     left: 0;
+     animation: linkUnderline 0.8s infinite;
+ }
+ 
+ @keyframes linkUnderline {
+     0% { transform: translateX(0); }
+     50% { transform: translateX(10px); }
+     100% { transform: translateX(0); }
+ }
+ 
+ .dropdown-menu {
+     transform-origin: top;
+     animation: dropdownOpen 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+ 
+ @keyframes dropdownOpen {
+     from { transform: scaleY(0); opacity: 0; }
+     to { transform: scaleY(1); opacity: 1; }
+ }
+ 
+ .burger-menu.active {
+     animation: menuSlide 0.4s ease-out forwards;
+ }
+ 
+ @keyframes menuSlide {
+     from { transform: translateX(-100%); }
+     to { transform: translateX(0); }
+ }
+ 
+ .username-moderator {
+     animation: moderatorGlow 2s infinite;
+ }
+ 
+ @keyframes moderatorGlow {
+     0%, 100% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+     50% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+ }
+ 

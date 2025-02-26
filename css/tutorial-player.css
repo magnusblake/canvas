@@ -1,0 +1,107 @@
+.tutorial-player-container {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #0A0A0A;
+    color: #FFFFFF;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tutorial-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-wrapper:hover .video-controls {
+    opacity: 1;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.progress-filled {
+    height: 100%;
+    background: #FF4400;
+    width: 0;
+}
+
+.controls-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.play-btn, .volume-btn, .fullscreen-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.play-btn svg, .volume-btn svg, .fullscreen-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume-slider {
+    width: 80px;
+    height: 4px;
+}
+
+.time-display {
+    color: white;
+    font-size: 14px;
+}
+
+.tutorial-info {
+    padding: 30px;
+}
+
+.tutorial-info h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.meta-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.meta-info span {
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    font-size: 14px;
+}

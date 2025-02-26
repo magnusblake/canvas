@@ -1,0 +1,135 @@
+.moderator-container {
+    max-width: 800px;
+    margin: 150px auto;
+    padding: 20px;
+}
+  .card-container {
+      width: 800px;
+      height: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease-out;
+      cursor: grab;
+      user-select: none;
+      transform-origin: center bottom;
+  }
+
+  .card-container:active {
+      cursor: grabbing;
+  }
+
+  .approve-indicator::after {
+      content: 'ОДОБРЕНО';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      transform: rotate(-20deg);
+  }
+
+  .reject-indicator::after {
+      content: 'ОТКЛОНЕНО';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: #FF4B4B;
+      color: white;
+      border-radius: 4px;
+      transform: rotate(20deg);
+  }
+.swipe-actions {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.swipe-actions button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.reject-btn {
+    background: #FF4B4B;
+    color: white;
+}
+
+.approve-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.images-section {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    height: 400px;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.images-section[data-count="2"] {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.images-section[data-count="3"] {
+    grid-template-areas: 
+        "featured featured"
+        "second third";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+.images-section[data-count="4"] {
+    grid-template-areas:
+        "big big normal1"
+        "normal2 normal3 normal1";
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.images-section[data-count="5"] {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+    .card-container {
+        width: 95%;
+        height: auto;
+    }
+}
